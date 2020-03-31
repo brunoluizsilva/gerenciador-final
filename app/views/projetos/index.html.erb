@@ -1,0 +1,37 @@
+
+<div class="row">
+  <div class="col-12 text-center">
+    <div class="box">
+    <h2 class="mt-3">Projetos</h2>
+    <%= link_to 'Novo Projeto', new_projeto_path, class: 'btn btn-sm mb-5' %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrição</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @projetos.each do |projeto| %>
+        <tr>
+          <td>
+            <%= projeto.nome %>
+          </td>
+          <td>
+            <%= projeto.descricao %>
+          </td>
+          
+          <td>
+            <%= link_to 'Detalhes', projeto , class: 'btn  btn-sm' %>
+            <%= link_to 'Editar', edit_projeto_path(projeto) , class: 'btn  btn-sm' %>
+            <%= link_to 'Excluir', projeto, method: :delete, class: 'btn  btn-sm', data: { confirm: 'Tem certeza que deseja excluir?' } %>
+          </td>
+          
+        </tr>
+        <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+

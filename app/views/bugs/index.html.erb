@@ -1,0 +1,45 @@
+
+<div class="row">
+  <div class="col-12 text-center">
+    <div class="box">
+    <h2 class="mt-3">Bugs</h2>
+    <%= link_to 'Novo Bug', new_bug_path, class: 'btn btn-sm mb-5' %>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nome</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Solução</th>
+      <th colspan="2">Projeto</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody class="text-center">
+    <% @bugs.each do |bug| %>
+        <tr>
+          <td>
+            <%= bug.nome %>
+          </td>
+          <td>
+            <%= bug.descricao %>
+          </td>
+          <td>
+            <%= bug.solucao %>
+          </td>
+          <td>
+            <td><%= bug.projeto.nome %></td>
+          </td>
+          <td>
+            <%= link_to 'Detalhes', bug , class: 'btn btn-sm' %>
+            <%= link_to 'Editar', edit_bug_path(bug) , class: 'btn btn-sm' %>
+            <%= link_to 'Excluir', bug, method: :delete, class: 'btn btn-sm', data: { confirm: 'Tem certeza que deseja excluir?' } %>
+          </td>
+          
+        </tr>
+        <% end %>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+

@@ -1,0 +1,62 @@
+@import "bootstrap";
+
+body {
+	background-color: #00adb5;
+	color: #222831 !important;
+}
+.btn {
+	background-color: #00adb5;
+	border-color: #00adb5;
+	color: #fff;
+}
+.btn:hover {
+	background: #06959B;
+	border-color: #06959B;
+	color: #fff;
+}
+.box {
+	height: 90vh;
+	margin-bottom: 20px;
+	padding: 20px 0px;
+	background: #eeeeee;
+}
+.jumbotron {
+	margin-top: -20px;
+	background-color: #eeeeee;
+	text-align: center;
+	padding: 120px;
+}
+
+.menu-vertical {
+	background-color: #222831;
+	padding: 20px 0px;
+	margin-top: 20px;
+}
+
+.menu-vertical ul {
+	display: flex;
+	justify-content: center;
+}
+
+.menu-vertical ul li {
+	list-style-type: none;
+    padding-right: 14px;
+}
+
+.menu-vertical a {
+	color: #fff;
+}
+
+.menu-vertical a:hover {
+	color: #00adb5;
+	text-decoration: none;
+}
+
+.marcador::after {
+	display:block;
+	content: "";
+	width: 60px;
+	height: 5px;
+	margin: 10px auto;
+	background: #00adb5;
+}

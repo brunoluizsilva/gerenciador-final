@@ -1,0 +1,18 @@
+
+<div class="jumbotron">
+  <h1 class="display-4">Gerenciador de Projetos</h1>
+  
+  <% if user_signed_in? %>
+  <p class="lead">Bem vindo, <%= current_user.name %>!</p>
+	<p><%= link_to "Sair", sair_path, method: :delete, class: 'btn btn-md' %></p>
+
+<% else %>
+	<p>
+		<p class="lead">Acesso restrito a usuários!</p>
+  	<%= link_to "Criar conta", new_user_path , class: 'btn btn-md mr-2' %>
+  	<%= link_to "Entrar", entrar_path, class: 'btn btn-md' %>
+  </p>
+<% end %>
+</div>
+
+
